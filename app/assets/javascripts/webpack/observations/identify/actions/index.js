@@ -9,6 +9,18 @@ function addTodo( text ) {
   };
 }
 
+function showModal( ) {
+  return {
+    type: "SHOW_MODAL"
+  };
+}
+
+function hideModal( ) {
+  return {
+    type: "HIDE_MODAL"
+  };
+}
+
 function setVisibilityFilter( filter ) {
   return {
     type: "SET_VISIBILITY_FILTER",
@@ -64,6 +76,8 @@ function fetchObservations( params ) {
 
 export {
   addTodo,
+  showModal,
+  hideModal,
   setVisibilityFilter,
   toggleTodo,
   addObservation,
