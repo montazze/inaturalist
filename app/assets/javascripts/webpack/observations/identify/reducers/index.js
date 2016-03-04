@@ -1,13 +1,8 @@
 import { combineReducers } from "redux";
-import todos from "./todos";
 import observations from "./observations";
-import modal from "./modal";
-// import visibilityFilter from './visibilityFilter';
+import modalObservation from "./modal_observation";
+import config from "./config_reducer.js";
 
-// const todoApp = combineReducers({
-//   todos,
-//   visibilityFilter
-// })
-const rootReducer = combineReducers( { todos, observations, modal } );
+const rootReducer = combineReducers( { observations, modalObservation, config } );
 
 export default rootReducer;

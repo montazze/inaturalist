@@ -77,7 +77,6 @@ class CommentsController < ApplicationController
       format.html { respond_to_create }
       format.mobile { respond_to_create }
       format.json do
-        Rails.logger.debug "[DEBUG] @comment: #{@comment}"
         if @comment.valid?
           if params[:partial] == "activity_item"
             @comment.html = view_context.render_in_format(:html, :partial => 'shared/activity_item', :object => @comment)

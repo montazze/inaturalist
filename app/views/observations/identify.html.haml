@@ -1,10 +1,9 @@
 - content_for :extrajs do
   = javascript_include_tag "observations-identify-bundle"
+- content_for :extrahead do
+  %meta{ name: "config:node_api_host", content: CONFIG.node_api_host }
 
 .container
   .row
     .col-xs-12
-      %h2 Identify
       #app
-      #content
-      #root
